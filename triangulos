@@ -1,0 +1,34 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double a, b;
+    cout << "Inserisci la lunghezza del lato a: ";
+    cin >> a;
+    cout << "Inserisci la lunghezza del lato b: ";
+    cin >> b;
+
+    int scelta;
+    cout << "Scegli l'operazione da eseguire:\n";
+    cout << "1. Calcola il perimetro\n";
+    cout << "2. Calcola l'area\n";
+    cout << "3. Calcola la diagonale\n";
+    cin >> scelta;
+
+    switch (scelta) {
+        case 1:
+            cout << "Il perimetro del rettangolo è: " << 2 * (a + b) << endl;
+            break;
+        case 2:
+            cout << "L'area del rettangolo è: " << a * b << endl;
+            break;
+        case 3:
+            cout << "La diagonale del rettangolo è: " << sqrt(a * a + b * b) << endl;
+            break;
+        default:
+            cout << "Scelta non valida." << endl;
+    }
+
+    return 0;
+}
